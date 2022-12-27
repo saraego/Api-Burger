@@ -1,0 +1,12 @@
+/*
+    config das pasta, informando onde esta as pasta de acesso, precisamos dizer ao sequelize o que esta em cada pasta
+    entao falamos a ele, onde esta o config, o models e a migrations
+*/
+
+const { resolve } = require('path')
+
+module.exports = {
+    config: resolve(__dirname,'src','config','database.js'),
+    'models-path': resolve(__dirname,'src','app','migrations'),
+   'migrations-path': resolve(__dirname,'src','database','migrations'),
+}
